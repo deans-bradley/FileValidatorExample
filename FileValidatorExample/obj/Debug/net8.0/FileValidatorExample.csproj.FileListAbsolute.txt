@@ -12,3 +12,4 @@ C:\Users\BradleyDeans\source\repos\FileValidatorExample\FileValidatorExample\obj
 C:\Users\BradleyDeans\source\repos\FileValidatorExample\FileValidatorExample\obj\Debug\net8.0\FileValidatorExample.pdb
 C:\Users\BradleyDeans\source\repos\FileValidatorExample\FileValidatorExample\obj\Debug\net8.0\FileValidatorExample.genruntimeconfig.cache
 C:\Users\BradleyDeans\source\repos\FileValidatorExample\FileValidatorExample\obj\Debug\net8.0\ref\FileValidatorExample.dll
+C:\Users\BradleyDeans\source\repos\FileValidatorExample\FileValidatorExample\obj\Debug\net8.0\FileValidatorExample.sourcelink.json

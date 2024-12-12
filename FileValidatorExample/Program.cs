@@ -51,7 +51,24 @@ void Main()
                                                             
     };
 
-    FileResult? fileResult = ValidateFileType(filePath, allowedFileTypes);
+    Console.WriteLine("\n1. Validate by path");
+    Console.WriteLine("2. Validate by Base64 string");
+    Console.Write("Select an option:");
+    int opt = int.Parse(Console.ReadLine() ?? "1");
+
+    FileResult? fileResult = new FileResult();
+
+    if (opt == 1)
+    {
+        fileResult = ValidateFileTypeByPath(filePath, allowedFileTypes);
+    }
+    else if (opt == 2)
+    {
+        byte[] fileBytes = File.ReadAllBytes(filePath);
+        string base64String = Convert.ToBase64String(fileBytes);
+        fileResult = ValidateFileTypeByBase64(base64String, fileName, allowedFileTypes);
+    }
+        
 
     if (fileResult != null)
     {
@@ -70,7 +87,7 @@ void Main()
     Console.ReadLine();
 }
 
-FileResult? ValidateFileType(string filePath, Dictionary<string, byte[]> allowedFileTypes)
+FileResult? ValidateFileTypeByPath(string filePath, Dictionary<string, byte[]> allowedFileTypes)
 {
     FileResult fileResult = new FileResult();
 
@@ -108,6 +125,47 @@ FileResult? ValidateFileType(string filePath, Dictionary<string, byte[]> allowed
         return null;
     }
 }
+
+// Only passing fileName to display in the result
+FileResult? ValidateFileTypeByBase64(string base64String, string fileName, Dictionary<string, byte[]> allowedFileTypes)
+{
+    FileResult fileResult = new FileResult();
+
+    try
+    {
+        byte[] fileBytes = Convert.FromBase64String(base64String);
+
+        if (fileBytes.Length == 0)
+        {
+            fileResult.IsEmpty = true;
+            return fileResult;
+        }
+
+        var buffer = fileBytes.Take(allowedFileTypes.Values.Max(sig => sig.Length)).ToArray();
+
+        fileResult.FileName = fileName;
+        fileResult.FileType = Path.GetExtension(fileName).TrimStart('.');
+        fileResult.BinarySignature = BitConverter.ToString(buffer).Replace("-", "");
+
+        fileResult.IsValid = allowedFileTypes.Any(type =>
+            type.Value.SequenceEqual(buffer.Take(type.Value.Length)));
+
+        fileResult.IsEmpty = false;
+
+        return fileResult;
+    }
+    catch (FormatException)
+    {
+        Console.WriteLine("Invalid Base64 string provided.");
+        return null;
+    }
+    catch (Exception ex)
+    {
+        Console.WriteLine($"An error occurred: {ex.Message}");
+        return null;
+    }
+}
+
 
 string[] GetFolders(string filePath)
 {
