@@ -37,8 +37,8 @@ void Main()
     string fileName = files[int.Parse(Console.ReadLine() ?? "") - 1];
     filePath += $@"/{fileName}";
 
-    // You can find other binary signature by visisting: https://www.garykessler.net/library/file_sigs.html
-    var allowedFileTypes = new Dictionary<string, byte[]>
+    // You can find other binary signatures by visisting: https://www.garykessler.net/library/file_sigs.html
+    Dictionary<string, byte[]> allowedFileTypes = new Dictionary<string, byte[]>
     {
         { "doc", new byte[] { 0xD0, 0xCF, 0x11, 0xE0 } }, // .doc files
         { "docx", new byte[] {0x50, 0x4B, 0x03, 0x04} },  // .docx files
@@ -47,8 +47,7 @@ void Main()
         { "png", new byte[] { 0x89, 0x50, 0x4E, 0x47 } },  // .png files
         { "tif", new byte[] { 0x49, 0x49, 0x2A, 0x00 } }, // .tif files 
         { "tiff", new byte[] { 0x4D, 0x4D, 0x00, 0x2B } }, // .tiff files
-        { "bmp", new byte[] { 0x42, 0x4D } } // .bmp files 
-                                                            
+        { "bmp", new byte[] { 0x42, 0x4D } } // .bmp files                                                      
     };
 
     Console.WriteLine("\n1. Validate by path");
