@@ -1,0 +1,14 @@
+C:\Users\BradleyDeans\source\repos\FileValidatorExample\FileValidatorExample\bin\Debug\net8.0\FileValidatorExample.exe
+C:\Users\BradleyDeans\source\repos\FileValidatorExample\FileValidatorExample\bin\Debug\net8.0\FileValidatorExample.deps.json
+C:\Users\BradleyDeans\source\repos\FileValidatorExample\FileValidatorExample\bin\Debug\net8.0\FileValidatorExample.runtimeconfig.json
+C:\Users\BradleyDeans\source\repos\FileValidatorExample\FileValidatorExample\bin\Debug\net8.0\FileValidatorExample.dll
+C:\Users\BradleyDeans\source\repos\FileValidatorExample\FileValidatorExample\bin\Debug\net8.0\FileValidatorExample.pdb
+C:\Users\BradleyDeans\source\repos\FileValidatorExample\FileValidatorExample\obj\Debug\net8.0\FileValidatorExample.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\BradleyDeans\source\repos\FileValidatorExample\FileValidatorExample\obj\Debug\net8.0\FileValidatorExample.AssemblyInfoInputs.cache
+C:\Users\BradleyDeans\source\repos\FileValidatorExample\FileValidatorExample\obj\Debug\net8.0\FileValidatorExample.AssemblyInfo.cs
+C:\Users\BradleyDeans\source\repos\FileValidatorExample\FileValidatorExample\obj\Debug\net8.0\FileValidatorExample.csproj.CoreCompileInputs.cache
+C:\Users\BradleyDeans\source\repos\FileValidatorExample\FileValidatorExample\obj\Debug\net8.0\FileValidatorExample.dll
+C:\Users\BradleyDeans\source\repos\FileValidatorExample\FileValidatorExample\obj\Debug\net8.0\refint\FileValidatorExample.dll
+C:\Users\BradleyDeans\source\repos\FileValidatorExample\FileValidatorExample\obj\Debug\net8.0\FileValidatorExample.pdb
+C:\Users\BradleyDeans\source\repos\FileValidatorExample\FileValidatorExample\obj\Debug\net8.0\FileValidatorExample.genruntimeconfig.cache
+C:\Users\BradleyDeans\source\repos\FileValidatorExample\FileValidatorExample\obj\Debug\net8.0\ref\FileValidatorExample.dll
